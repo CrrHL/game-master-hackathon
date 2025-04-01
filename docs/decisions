@@ -1,1 +1,5 @@
-Elección de LLM para agente IA:
+#Elección de LLM para agente IA:
+
+Desde un primer minuto he querido optar por implementar todo en local... ¡craso error y tiempo perdido para este reto! 
+La primera opción era cargar Gemma3 12b Instruct o Phi4 (ambos modelos pueden cargarse en 8GB de VRAM y hacer offload de otros 10GB a la RAM y poder sacar una partida breve con 8192 tokens de contexto y calidad razonable).
+Pero parece que quería empezar la casa por el tejado, ya que era más fácil llamar a una API de cualquier LLM público actualmente.
