@@ -647,16 +647,6 @@
                 "type": "number",
                 "operation": "notEquals"
               }
-            },
-            {
-              "id": "ec9c7b7b-3c39-4f76-bce0-5019116c2bed",
-              "leftValue": "",
-              "rightValue": "",
-              "operator": {
-                "type": "string",
-                "operation": "equals",
-                "name": "filter.operator.equals"
-              }
             }
           ],
           "combinator": "or"
@@ -668,7 +658,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -1840,
+        -1880,
         400
       ],
       "id": "ae59ea77-fef1-4a91-97be-2da54c54ab9f",
@@ -1259,7 +1249,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -1860,
+        -1600,
         1260
       ],
       "id": "fe0b5d40-c31d-4f8d-9e43-9181cf5fe323",
@@ -1968,8 +1958,8 @@
       "type": "n8n-nodes-base.airtable",
       "typeVersion": 2.1,
       "position": [
-        540,
-        620
+        440,
+        1040
       ],
       "id": "09825a37-bca1-43a0-a9ec-e79ac4ee4376",
       "name": "Airtable5",
@@ -1985,7 +1975,7 @@
         "promptType": "define",
         "text": "={{ $('When chat message received').item.json.chatInput }}",
         "options": {
-          "systemMessage": "=Eres un Dungeon Master.\nEl jugador empieza a jugar con su personaje y le das una creativa bienvenida al mundo fantástico.  Ten en cuenta los valores de cada campo del json como su nombre (){{ $('Airtable1').item.json.CharName }} y sus habilidades en  ({{ $('Airtable1').item.json.FUE_DEF }} como Fuerza Defensa, {{ $('Airtable1').item.json.DES_DEF }} como Destreza, {{ $('Airtable1').item.json.CON_DEF }} como constitución, {{ $('Airtable1').item.json.INT_DEF }} como inteligencia, sabiduría como {{ $('Airtable1').item.json.SAB_DEF }}, carisma como {{ $('Airtable1').item.json.CAR_DEF }} y {{ $('Airtable1').item.json.HP_Actual }} como puntos de salud) para posibles combates.\n\nUsa la herramienta Dado20 para lanzar dados de 20 o 1d20\nDO NOT reply in any code.",
+          "systemMessage": "=Eres un Dungeon Master.\nEl jugador empieza a jugar con su personaje y le das una creativa bienvenida al mundo fantástico.  Ten en cuenta los valores de cada campo del json como su nombre (){{ $('Airtable1').item.json.CharName }} {{ $json.fields.CharName }} y sus habilidades en  ({{ $('Airtable1').item.json.FUE_DEF }} {{ $json.fields.FUE_DEF }} como Fuerza Defensa, {{ $('Airtable1').item.json.DES_DEF }} {{ $json.fields.DES_DEF }} como Destreza, {{ $('Airtable1').item.json.CON_DEF }} {{ $json.fields.CON_DEF }} como constitución, {{ $('Airtable1').item.json.INT_DEF }} {{ $json.fields.INT_DEF }} como inteligencia, sabiduría como {{ $('Airtable1').item.json.SAB_DEF }} {{ $json.fields.SAB_DEF }}, carisma como {{ $('Airtable1').item.json.CAR_DEF }} {{ $json.fields.CAR_DEF }} y {{ $('Airtable1').item.json.HP_Actual }} {{ $json.fields.HP_Actual }} como puntos de salud) para posibles combates.\n\nUsa la herramienta Dado20 para lanzar dados de 20 o 1d20\nDO NOT reply in any code.",
           "maxIterations": 10
         }
       },
@@ -2057,7 +2047,7 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1920,
+        -1900,
         600
       ],
       "id": "ed038a94-9f37-4962-88bd-75e102c97dee",
@@ -2066,7 +2056,7 @@
     {
       "parameters": {
         "content": "## Este es el módulo de juego",
-        "height": 420,
+        "height": 440,
         "width": 3160,
         "color": 4
       },
@@ -3241,7 +3231,13 @@
     },
     "Airtable5": {
       "main": [
-        []
+        [
+          {
+            "node": "AI Agent2",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "AI Agent2": {
@@ -3349,7 +3345,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "33c54721-27b5-41ca-8ef1-0c6add338ca1",
+  "versionId": "f4f63fa2-21c8-4e17-981b-c92dcd4dddb1",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "558d88703fb65b2d0e44613bc35916258b0f0bf983c5d4730c00c424b77ca36a"
