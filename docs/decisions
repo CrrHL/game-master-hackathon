@@ -2,4 +2,12 @@
 
 Desde un primer minuto he querido optar por implementar todo en local... ¡craso error y tiempo perdido para este reto! 
 La primera opción era cargar Gemma3 12b Instruct o Phi4 (ambos modelos pueden cargarse en 8GB de VRAM y hacer offload de otros 10GB a la RAM y poder sacar una partida breve con 8192 tokens de contexto y calidad razonable).
-Pero parece que quería empezar la casa por el tejado, ya que era más fácil llamar a una API de cualquier LLM público actualmente.
+Pero parece que quería empezar la casa por el tejado al querer ofrecer no solo solución al reto, sino que además fuese todo en local (llama mucho el hecho de no recurrir a un servicio LLM de Microsoft, OpenAI, Google...). 
+He optado por el modelo Gemini 2 Flash Lite para este flujo de trabajo debido al bajo coste aparente de EURO/1millon token y la rapidez de cómputo que promociona Google y que al contrastar con otros servicios como el de OpenAI, Grok y Anthropic, parece ser el más efectivo en cuanto a costes durante fases de prototipado.
+A decir verdad, para una partida de rol, tanto Claude de Anthropic como ChatGPT de OpenAI me han parecido, personalmente, los más creativos sin tener que tocar parámetros de temperatura, top_P, etc. No quita que con Gemini pueda ajustarse para conseguir una calidad similar.
+En resumen, la elección de Gemini se ciñe a bajo coste, velocidad de respuesta y aparente calidad del mensaje resultante.
+
+
+#Elección de base de datos:
+Igualmente al querer recurrir a usar el servicio de Postgres integrado en n8n debido a ser todo en entorno local, me he chocado con un gran muro para intentar levantar el servicio. 
+He optado por Airtable finalmente por haberlo utilizado anteriormente para otro proyecto, su facilidad de puesta en marcha y coste gratuito para fases de prototipado. Otro servicio como MongoDB lo hubiese valorado también.
