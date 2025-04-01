@@ -1,0 +1,11 @@
+#Arquitectura del sistema
+
+Como expongo en el vídeo, no he tenido tiempo a elaborar el microservicio ni el frontend, tan sólo el workflow de n8n. Para probar este flujo a través de la ventana de chat del propio n8n:
+
+1: Escribir un "Hola", o saludar para comenzar el flujo.
+2: Se pedirá un email como identificador del jugador. Como la creación de nuevo mail no funciona, utilizar test2@test.com, test3@test.com. test4@test.com y test5@test.com para simular sucesivos jugadores nuevos. Para simular un jugador con un Char/PJ ya creado, usar test@test.com
+3: Para el nuevo jugador, se pedirá un nombre de personaje. 
+4: Escrito el nombre de personaje, se harán las tiradas automáticas de dados 3xd6 y 1xd8 para crear sus habilidades y puntos de salud
+5: Se pasará a la sección de juego donde el LLM creará el escenario textual y el jugador elige qué hacer
+6: Cuando se pida lanzar el dado 20, escribir "Lanzar dado 20"
+7: Deslogear clickando en el botón de testear workflow manualmente
