@@ -1,6 +1,6 @@
 #Arquitectura del sistema
 
-Como expongo en el vídeo, no he tenido tiempo a elaborar el microservicio ni el frontend, tan sólo el workflow de n8n. Para probar este flujo a través de la ventana de chat del propio n8n:
+Como expongo en el vídeo, no he tenido tiempo a elaborar el microservicio ni el frontend, tan sólo el workflow de n8n conectado a una base de datos en Airtable y llamada a API del modelo Gemini 2 Flash Lite. Para probar este flujo a través de la ventana de chat del propio n8n:
 
 1: Escribir un "Hola", o saludar para comenzar el flujo.
 2: Se pedirá un email como identificador del jugador. Como la creación de nuevo mail no funciona, utilizar test2@test.com, test3@test.com. test4@test.com y test5@test.com para simular sucesivos jugadores nuevos. Para simular un jugador con un Char/PJ ya creado, usar test@test.com
